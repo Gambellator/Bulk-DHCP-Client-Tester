@@ -19,7 +19,7 @@ from scapy.arch.pcapdnet import *
 from scapy.all import Ether, Dot1Q, IP, UDP, BOOTP, DHCP
 from scapy.automaton import *
 
-import dhcpclient.packetqueue as packetqueue
+import packetqueue
 global PACKET_QUEUE
 PACKET_QUEUE = None
 

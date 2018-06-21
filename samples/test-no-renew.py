@@ -5,7 +5,7 @@ import random
 import progressbar
 import dhcpclient.dhcpclient as dhcp
 
-from dhcpclient.utilites import RandomMac
+from dhcpclient.utilities import RandomMac
 
 AVC = 'AVC999904444401'
 VLAN = [2001]
