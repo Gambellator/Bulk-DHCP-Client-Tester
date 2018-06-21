@@ -19,12 +19,9 @@ from scapy.arch.pcapdnet import *
 from scapy.all import Ether, Dot1Q, IP, UDP, BOOTP, DHCP
 from scapy.automaton import *
 
-import packetqueue
+import dhcpclient.packetqueue as packetqueue
 global PACKET_QUEUE
 PACKET_QUEUE = None
-
-#from dhcppatches import PatchedAutomaton as Automaton
-#from scapy.sendrecv import sendp
 
 logging.getLogger("scapy").setLevel(1)
 logger = logging.getLogger(__name__)
@@ -94,7 +91,7 @@ class DHCPClient(Automaton):
     def parse_args(self, interface, mac_address, hostname=None, broadcast=False, 
                                                  early_renew=0, early_rebind=0, 
                                                  no_renew=False, quick_start=False, dhcp_options=[],
-                                                 vlan_tags=[], option82=None, dsl_sub_options=[],debug=100, **kargs):
+                                                 vlan_tags=[], option82=None, dsl_sub_options=[], debug=100, **kargs):
         self.send_socket_kargs = {}
         Automaton.parse_args(self, **kargs)
         self.debug_level = 2

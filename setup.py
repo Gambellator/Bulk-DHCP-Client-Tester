@@ -10,7 +10,7 @@ with open('LICENSE') as f:
     license = f.read()
 
 setup(
-    name='bulkdhcpclient',
+    name='dhcpclient',
     version='0.0.1',
     description='Bulk DHCP client tester',
     long_description=readme,
